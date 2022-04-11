@@ -7,7 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./vote.component.css'],
 })
 export class VoteComponent implements OnInit {
-  @Input() quote;
+  @Input()
+  quote!: { upvote: number; downvote: number; };
   @Output() thisEvent = new EventEmitter<string>();
 
   upvote() {

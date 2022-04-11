@@ -90,7 +90,7 @@ export class QuoteComponent implements OnInit {
     ),
   ];
 
-  findHighestUpvote(arr) {
+  findHighestUpvote(arr: any[]) {
     arr.forEach((item) => {
       item.maxUpvote = false;
     });
@@ -98,13 +98,13 @@ export class QuoteComponent implements OnInit {
       return item.upvote;
     });
     let highestVoteIndex = newArr.indexOf(Math.max(...newArr));
-    return arr.forEach((item, index) => {
+    return arr.forEach((item: { maxUpvote: boolean; }, index: any) => {
       if (index === highestVoteIndex) {
         item.maxUpvote = true;
       }
     });
   }
-  newQuote(quote) {
+  newQuote(quote: Quote) {
     this.quotes.push(quote);
     setTimeout(() => {
       window.scrollTo(0, document.body.scrollHeight);
