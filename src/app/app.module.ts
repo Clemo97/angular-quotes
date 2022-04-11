@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header/header.component';
 import { QuoteComponent } from './components/quote/quote/quote.component';
 import { QuoteDetailsComponent } from './components/quote-details/quote-details.component';
+import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     QuoteComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    QuoteFormComponent
   ],
   imports: [
     BrowserModule
