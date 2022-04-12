@@ -10,6 +10,7 @@ import { QuoteFormComponent } from './components/quote-form/quote-form.component
 import { VoteComponent } from './components/vote/vote.component';
 import { HighestVoteDirective } from './directives/highest-vote.directive';
 import { TimePassedPipe } from './pipes/time-passed.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TimePassedPipe } from './pipes/time-passed.pipe';
     TimePassedPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

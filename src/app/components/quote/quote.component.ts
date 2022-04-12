@@ -91,10 +91,10 @@ export class QuoteComponent implements OnInit {
   ];
 
   findHighestUpvote(arr: any[]) {
-    arr.forEach((item) => {
+    arr.forEach((item: { maxUpvote: boolean; }) => {
       item.maxUpvote = false;
     });
-    let newArr = arr.map((item) => {
+    let newArr = arr.map((item: { upvote: any; }) => {
       return item.upvote;
     });
     let highestVoteIndex = newArr.indexOf(Math.max(...newArr));

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-7 pr-4">
       <div *ngFor="let quote of quotes; let i = index">
-        <div class="quote-div" [quote]="quote" (click)="findHighestUpvote(quotes)" appHighestVote>
+        <div>
           <div class="quote">{{ quote.quote }}</div>
           <br />
 
