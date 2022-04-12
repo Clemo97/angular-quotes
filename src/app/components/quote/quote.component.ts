@@ -10,95 +10,47 @@ export class QuoteComponent implements OnInit {
   quotes = [
     new Quote(
       1,
-      'I spent a lot of money on booze, birds and fast cars. The rest I just squandered.',
+      'I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.',
       0,
       0,
-      'George Best',
-      'Psy Aspin'
+      'Bruce Lee',
+      'Clement Lumumba'
     ),
     new Quote(
       2,
-      'The cars we drive say a lot about us.',
+      'Education is the most powerful weapon which you can use to change the world.',
       0,
       0,
-      'Alexandria Paul',
-      'Psy Aspin'
+      'Nelson Mandela',
+      'Myra Bernadette'
     ),
     new Quote(
       3,
-      "There's three things men always talk about - women, sports, and cars.",
+      'Equipped with his five senses, man explores the universe around him and calls the adventure Science.',
       0,
       0,
-      'Mario Lopez',
-      'Psy Aspin'
+      'Edwin Hubble',
+      'Australian Gregory'
     ),
     new Quote(
       4,
-      'Self-driving cars are the natural extension of active safety and obviously something we should do.',
+      'I do not always know what I want, but I do know what I don\'t want.',
       0,
       0,
-      'Elon Musk',
-      'Aspin Isoe'
-    ),
-    new Quote(
-      5,
-      "But my passion is racing cars. It's what I like to do in my off time.",
-      0,
-      0,
-      'Mark-Paul Gosselaar',
-      'Isoe A.'
-    ),
-    new Quote(
-      6,
-      'If GM had kept up with technology like the computer industry has, we would all be driving $25 cars that got 1,000 MPG.',
-      0,
-      0,
-      'Bill Gates',
-      'Psy A.'
-    ),
-    new Quote(
-      7,
-      "It's like driving a car at night. You never see further than your headlights, but you can make the whole trip that way.",
-      0,
-      0,
-      'E.L. Doctorow',
-      'Psy Isoe'
-    ),
-    new Quote(
-      8,
-      "It's a never ending battle of making your cars better and also trying to be better yourself.",
-      0,
-      0,
-      'Dale Earnhardt',
-      'Psy Aspin'
-    ),
-    new Quote(
-      8,
-      'Everything in life is somewhere else, and you get there in a car.',
-      0,
-      0,
-      'E.B. White',
-      'Psy Aspin'
-    ),
-    new Quote(
-      8,
-      'I love fast cars and to go too fast in them.',
-      0,
-      0,
-      'Lara Flynn Boyle',
-      'Psy Aspin'
+      'Stanley Kubrick',
+      'Jim Nelson'
     ),
   ];
 
   findHighestUpvote(arr: any[]) {
-    arr.forEach((item: { maxUpvote: boolean; }) => {
+    arr.forEach((item: { maxUpvote: boolean }) => {
       item.maxUpvote = false;
     });
-    let newArr = arr.map((item: { upvote: any; }) => {
+    let newArr = arr.map((item: { upvote: any }) => {
       return item.upvote;
     });
     let highestVoteIndex = newArr.indexOf(Math.max(...newArr));
-    return arr.forEach((item: { maxUpvote: boolean; }, index: any) => {
+    return arr.forEach((item: { maxUpvote: boolean }, index: any) => {
       if (index === highestVoteIndex) {
         item.maxUpvote = true;
       }
