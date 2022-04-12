@@ -19,7 +19,7 @@
 ****
 
 **Qoutes Form**
-![Alt text](/src/assets/quoteForm.png?raw=true "Optional Title")
+![Alt text](/src/assets/quotesForm.png?raw=true "Optional Title")
 
 **Quotes Board**
 ![Alt text](/src/assets/quotesApp.png?raw=true "Optional Title")
